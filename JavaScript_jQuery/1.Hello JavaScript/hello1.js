@@ -1,0 +1,1 @@
+console.log("Hello from outer file 1 – hello1.js");

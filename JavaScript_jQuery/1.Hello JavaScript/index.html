@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Where to</title>
+    <script>
+        function hello(gretting) {
+            console.log(gretting);
+        }
+    </script>
+    <script src="hello1.js"></script>
+</head>
+
+<body>
+    <h1>JavaScript Where to</h1>
+    <p>
+        <button onclick="hello('Hello from button click');">button</button>
+        <a href="javascript:hello('Hello from a link click');">link</a>
+        <span id="hi">span</span>
+    </p>
+    <script>
+        hello("Hello from auto invoking");
+        document.getElementById("hi").addEventListener("click", function () { hello("Hello from span"); });
+    </script>
+    <script src="hello2.js"></script>
+</body>
+
+</html>
