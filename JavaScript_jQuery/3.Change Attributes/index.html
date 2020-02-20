@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Change HTML Attributes</title>
+    </head>
+
+    <body>
+        <h1>Change HTML Attributes</h1>
+        <p>
+            <img id="myimg" src="" width="300" height="240">
+        </p>
+        <p>
+            <button onclick="changeSize(600,480);">600 X 480</button>
+            <button onclick="changeSize(300,240);">300 X 240</button>
+            <button onclick="changeSize(150,120);">150 X 120</button>
+        </p>
+        <script>
+            var img = document.getElementById("myimg");
+            var imgSrc = "https://picsum.photos/300/240";
+            img.src = imgSrc;
+
+            function changeSize(x, y) {
+                img.width = x;
+                img.height = y;
+            }
+        </script>
+    </body>
+
+</html>
