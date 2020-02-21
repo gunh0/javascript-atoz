@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Event Handling</title>
+    </head>
+    <body>
+        <p>
+            <button onclick="alert('hello')">hello</button>
+        </p>
+        <p>
+            <button id="btn1">hellobtn-1</button>
+        </p>
+        <p>
+            <button id="btn2">hellobtn-2</button>
+        </p>
+        <p>
+            <button id="btn3">hellobtn-3</button>
+        </p>
+        <script>
+            document
+                .getElementById("btn1")
+                .onclick = function () {
+                    alert('hellobtn-1');
+                };
+            document
+                .getElementById("btn2")
+                .addEventListener("click", function () {
+                    alert('hellobtn-2');
+                });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $("#btn3").click(function () {
+                alert('hellobtn-3');
+            });
+            $("button").on("mouseover", function () {
+                $(this).css({"color": "red"});
+            });
+            $("button").on("mouseout", function () {
+                $(this).css({"color": "black"});
+            });
+        </script>
+    </body>
+</html>

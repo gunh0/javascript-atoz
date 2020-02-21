@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML form validation</title>
+    </head>
+
+    <body>
+        <form
+            name="testForm"
+            action="test.php"
+            onsubmit="return checkIfFormValid()"
+            method="post">
+            <label for="uname">name</label>
+            <input type="text" name="uname" id="uname" required>
+            <input type="submit" value="Transfer">
+        </form>
+        <script>
+            function checkIfFormValid() {
+                var uname = document
+                    .getElementById("uname")
+                    .value;
+                if (uname == null || uname == "") {
+                    alert("You must enter your name.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+
+</html>
