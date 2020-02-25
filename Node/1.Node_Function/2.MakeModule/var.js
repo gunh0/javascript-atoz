@@ -5,3 +5,8 @@ module.exports = {
     odd,
     even,
 };
+
+/*
+exports.odd = 'ODD.'
+exports.even = 'EVEN.'
+*/
