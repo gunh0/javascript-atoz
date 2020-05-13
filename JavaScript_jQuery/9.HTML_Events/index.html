@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript HTML Events</title>
+</head>
+
+<body>
+    <button id="click1">Time1</button>
+    <script>
+        document.getElementById("click1").addEventListener("click", function () {
+            document.getElementById("click1").innerHTML = new Date();
+        });
+        //document.getElementById("click1").removeEventListener("click",showTime);
+    </script>
+
+    <button id="click2">Time2</button>
+    <script>
+        document.getElementById("click2").addEventListener("click", showTime);
+
+        function showTime() {
+            document.getElementById("click2").innerHTML = new Date();
+        }
+
+        document.getElementById("click2").removeEventListener("click",showTime);
+    </script>
+</body>
+
+</html>
