@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> JavaScript </title>
+</head>
+
+<body>
+    <button id="click1">Button</button>
+    <script>
+        document.getElementById("click1").addEventListener("click", function () {
+            var username = "Devgun";
+            var phone = "010-1234-5678";
+            var birth = "123456789";
+            var greetings = "Hello!";
+            var myskills = '2 ("JavaScript Coding","PHP Coding")';
+            var myprofile = "Name: " + username + ", Phone: " + phone;
+            myprofile += ", Birth: " + birth + ", Skills: " + myskills;
+            myprofile += ", Hello: " + greetings;
+            alert(myprofile);
+        });
+    </script>
+</body>
+
+</html>
