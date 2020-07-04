@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.writeFile('./writeme.txt','sample text',(err)=>{
+fs.writeFile('./writeme.txt','write text',(err)=>{
     if(err){
         throw err;
     }
