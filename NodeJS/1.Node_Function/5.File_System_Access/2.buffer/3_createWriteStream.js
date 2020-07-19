@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const writeStream = fs.createWriteStream('./write_sample.txt');
-writeStream.on('finish',()=>{
+writeStream.on('finish', () => {
     console.log('Finish, write_sample.txt');
 });
 

@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const readStream = fs.createReadStream('./sample_text.txt', {
-    highWaterMark: 16   // 16B
+    highWaterMark: 16 // 16B
 });
 const data = [];
 
