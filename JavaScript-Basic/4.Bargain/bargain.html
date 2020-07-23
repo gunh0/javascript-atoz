@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>BARGAIN</title>
+	<link rel="stylesheet" href="css/bargain.css">
+</head>
+<body>	
+	<div id="contents">
+		<img src="sale.png">
+		<ul>
+			<li>
+					<label for="oPrice">Original Price</label> 
+					<input type="text" id="oPrice">\
+			</li>
+			<li>
+				<label for="rate">Rate</label>
+				<input type="text" id="rate">%
+			</li>
+			<li>
+				<button onclick="showPrice()">Discounted Price Calculation</button>
+			</li>
+		</ul>
+		<div id="showResult"></div>	
+	</div>	
+		
+	<script>
+		function showPrice() {
+			var originPrice = document.querySelector('#oPrice').value;
+			var rate = document.querySelector('#rate').value;
+			var savedPrice = originPrice * (rate/100);
+			var resultPrice = originPrice - savedPrice;
+			document.querySelector('#showResult').innerHTML = "The original price of the product is " + originPrice + "\\, and the discount rate is " + rate + "%. You can buy it for "+ resultPrice +"\\, saving " + savedPrice + "\\."; 
+		}
+	</script>
+</body>
+</html>
