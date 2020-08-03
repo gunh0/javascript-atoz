@@ -9,9 +9,12 @@ const parseCookies = (cookie = '') =>
         return acc;
     }, {});
 
+const session = {};
+
 http.createServer((req, res) => {
         const cookies = parseCookies(req.headers.cookie);
         if (req.url.startsWith('/login')) {
+            console.log('/login start');
             const {
                 query
             } = url.parse(req.url);
@@ -20,17 +23,24 @@ http.createServer((req, res) => {
             } = qs.parse(query);
             const expires = new Date();
             expires.setMinutes(expires.getMinutes() + 5);
+            const randomInt = +new Date();
+            session[randomInt] = {
+                name,
+                expires,
+            };
             res.writeHead(302, {
                 Location: '/',
-                'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+                'Set-Cookie': `session=${randomInt}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
             });
             res.end();
-        } else if (cookies.name) {
+        } else if (cookies.session && session[cookies.session].expires > new Date()) {
+            console.log('Show name.');
             res.writeHead(200, {
                 'Content-Type': 'text/html; charset=utf-8'
             });
-            res.end(`Hello. ${cookies.name}!`);
+            res.end(`Hello. ${session[cookies.session].name}!`);
         } else {
+            console.log('Show server.html');
             fs.readFile('./server.html', (err, data) => {
                 if (err) {
                     throw err;
@@ -39,6 +49,6 @@ http.createServer((req, res) => {
             });
         }
     })
-    .listen(8002, () => {
-        console.log('Currently waiting on port 8002.');
+    .listen(8003, () => {
+        console.log('Currently waiting on port 8003.');
     });
