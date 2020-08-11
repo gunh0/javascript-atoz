@@ -25,3 +25,6 @@ $ npm start
 # check http://localhost:3000/users
 ```
 
+<br/>
+
+![image-20210121061509308](README.assets/image-20210121061509308.png)
