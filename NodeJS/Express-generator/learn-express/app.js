@@ -18,7 +18,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(logger("dev"));
+// app.use(logger("dev"));   // To leave a log on development
+app.use(logger("combined")); // To leave a log on deployment
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
