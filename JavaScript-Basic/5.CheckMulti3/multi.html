@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check Multiple of 3</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        var userNumber = prompt("Enter A Number.");
+        var displayArea = document.querySelector('#result');
+
+        if (userNumber != null) {
+            if (userNumber % 3 === 0) {
+                displayArea.innerHTML = userNumber + " is a multiple of 3.";
+            }
+            else {
+                displayArea.innerHTML = userNumber + " is not a multiple of 3.";
+            }
+        }
+        else {
+            alert("Cancelled.");
+        }
+    </script>
+</body>
+
+</html>
