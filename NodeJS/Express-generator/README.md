@@ -97,3 +97,74 @@ console.log(pug.renderFile('template.pug', {
 <br/>
 
 ###### https://pugjs.org/api/getting-started.html
+
+<br/>
+
+<br/>
+
+# EJS
+
+What is the "E" for? "Embedded?" Could be.
+
+How about "Effective," "Elegant," or just "Easy"?
+
+EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+
+No religiousness about how to organize things.
+
+No reinvention of iteration and control-flow.
+
+It's just plain JavaScript.
+
+<br/>
+
+### Get Started
+
+#### Install
+
+It's easy to install EJS with NPM.
+
+```bash
+$ npm install ejs
+```
+
+<br/>
+
+#### Use
+
+Pass EJS a template string and some data. BOOM, you've got some HTML.
+
+```javascript
+let ejs = require('ejs');
+let people = ['geddy', 'neil', 'alex'];
+let html = ejs.render('<%= people.join(", "); %>', {people: people});
+```
+
+<br/>
+
+#### CLI
+
+Feed it a template file and a data file, and specify an output file.
+
+```bash
+ejs ./template_file.ejs -f data_file.json -o ./output.html
+```
+
+<br/>
+
+#### Browser support
+
+Download a browser build from [the latest release](https://github.com/mde/ejs/releases/latest), and use it in a script tag.
+
+```markup
+<script src="ejs.js"></script>
+<script>
+  let people = ['geddy', 'neil', 'alex'];
+  let html = ejs.render('<%= people.join(", "); %>', {people: people});
+</script>
+```
+
+<br/>
+
+###### [EJS - Embedded JavaScript templates](https://ejs.co/)
+
