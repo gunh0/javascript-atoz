@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SWITCH-CASE</title>
+    <link rel="stylesheet" href="switch.css">
+</head>
+
+<body>
+    <script>
+        var session = prompt("Please select a session of interest. 1-Marketing, 2-Development, 3-Design", "1");
+
+        switch (session) {
+            case "1": document.write("<p>The Marketing session will be held in room <strong>201</strong></p>");
+                break;
+            case "2": document.write("<p>The Development session will be held in room <strong>203</strong></p>");
+                break;
+            case "3": document.write("<p>The Design session will be held in room <strong>205</strong></p>");
+                break;
+            default: alert("Invalid input value.");
+        }
+    </script>
+</body>
+
+</html>
