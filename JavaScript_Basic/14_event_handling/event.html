@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JavaScript Event</title>
+        <link rel="stylesheet" href="css/event.css" />
+    </head>
+    <body>
+        <div id="item">
+            <img src="images/flower1.jpg" alt="" />
+            <button class="over" id="open" onclick="showDetail()">
+                Details
+            </button>
+            <div id="desc" class="detail">
+                <h4>Dandelion</h4>
+                <p>
+                    The species of Taraxacum are tap-rooted, perennial,
+                    herbaceous plants, native to temperate areas of the Northern
+                    Hemisphere. The genus contains many species, which usually
+                    (or in the case of triploids, obligately) reproduce by
+                    apomixis, resulting in many local populations and endemism.
+                </p>
+                <button id="close" onclick="hideDetail()">Close</button>
+            </div>
+        </div>
+
+        <script src="js/event.js"></script>
+    </body>
+</html>
