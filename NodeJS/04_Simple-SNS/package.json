@@ -1,14 +1,14 @@
 {
-  "name": "sns-service",
+  "name": "simple-sns",
   "version": "1.0.0",
-  "description": "SNS Service",
-  "main": "app.js",
+  "description": "Simple SNS",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "author": "DevGun",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
@@ -16,12 +16,12 @@
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "morgan": "^1.10.0",
-    "mysql2": "^2.3.0",
+    "mysql2": "^2.3.2",
     "nunjucks": "^3.2.3",
     "pug": "^3.0.2",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.7.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "chokidar": "^3.5.2"
   }
 }
