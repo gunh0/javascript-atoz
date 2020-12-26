@@ -28,7 +28,7 @@ The search can go on until it gets to the root prototype, which is now the objec
 
 This is what makes it easy to reuse codes in JavaScript programming and it also conserves memory.
 
-&nbsp;
+<br/>
 
 ### Closures & Lambdas
 
@@ -42,7 +42,7 @@ These closures are significant because they provide state for objects and they c
 
 Closures are therefore important in JavaScript because most APIs that require a callback function do not provide other instruments through which they can send the parameters to those callback functions.
 
-&nbsp;
+<br/>
 
 ### Express & Node.js
 
