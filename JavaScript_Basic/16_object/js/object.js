@@ -6,12 +6,15 @@ var toyRobot = {
 	quantity: 10,
 	showStock: function () {
 		document.querySelector("#display").innerHTML =
+			"The product " +
 			this.name +
-			" | " +
+			" has the product ID " +
 			this.productId +
-			" : " +
+			"<br/>and the price is " +
+			this.price +
+			".<br>There are " +
 			this.quantity +
-			" left.";
+			" in stock.";
 	},
 };
 
